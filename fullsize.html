@@ -1,0 +1,27 @@
+<html>
+<head>
+ <script  type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css">
+<style>
+
+</style>
+</head>
+<body id="bdy" align="center" onload="loadimg();" style="background-color:#ffffff;margin:0px; padding:0px;">
+<a id="bk" href=""><button type="button" class="pull-left btn btn-md btn-primary">BACK</button></a>
+<center id="img">
+</center>
+<script type="text/javascript">
+	function loadimg()
+	{
+		var idx = document.URL.indexOf('?');
+		var a = document.URL.substr(idx+1);
+		document.getElementById('img').innerHTML="<img src='"+a+"'/>";
+		var idx = document.URL.indexOf('?imagename=');
+		var a = document.URL.substr(idx);
+		$("#bk").attr('href',"thumbnail.html"+a);
+	}
+	
+</script>
+
+</body>
+</html>
